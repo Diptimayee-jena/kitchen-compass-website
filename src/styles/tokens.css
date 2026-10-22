@@ -1,0 +1,31 @@
+:root {
+  /* Colors */
+  --cream: #faf6ee;
+  --cream-dark: #f1ebdd;
+  --sage: #8aa17c;
+  --sage-dark: #6f8863;
+  --sage-light: #e4ecdd;
+  --charcoal: #2f3430;
+  --charcoal-soft: #5b625d;
+  --white: #ffffff;
+  --heart: #d9534f;
+  --border: #e4dccb;
+
+  /* Typography */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: "Fraunces", Georgia, serif;
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(47, 52, 48, 0.08);
+  --shadow-md: 0 8px 24px rgba(47, 52, 48, 0.1);
+
+  /* Layout */
+  --container: 1120px;
+  --header-height: 68px;
+}

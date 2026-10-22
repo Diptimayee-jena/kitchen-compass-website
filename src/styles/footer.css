@@ -1,0 +1,100 @@
+.footer {
+  margin-top: 48px;
+  padding: 40px 0 28px;
+  background: var(--cream-dark);
+  border-top: 1px solid var(--border);
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.footer__about p {
+  max-width: 320px;
+  color: var(--charcoal-soft);
+  font-size: 0.95rem;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__links a,
+.footer__links button {
+  padding: 0;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 0.95rem;
+  color: var(--charcoal-soft);
+}
+
+.footer__links a:hover,
+.footer__links button:hover {
+  color: var(--sage-dark);
+  text-decoration: underline;
+}
+
+/* ---------- Bottom bar: divider, social icons, copyright ---------- */
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* centers icons and text */
+  gap: 18px;
+  margin-top: 36px;         /* space above the divider line */
+  padding-top: 28px;        /* space between the line and the content */
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--charcoal-soft);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.footer__social a:hover {
+  background: var(--sage);
+  border-color: var(--sage);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.footer__copy {
+  font-size: 0.85rem;
+  color: var(--charcoal-soft);
+}

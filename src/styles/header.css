@@ -1,0 +1,126 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--header-height);
+  background: rgba(250, 246, 238, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--charcoal);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--charcoal-soft);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.header__link:hover {
+  background: var(--sage-light);
+  color: var(--charcoal);
+}
+
+.header__fav svg {
+  color: var(--heart);
+}
+
+.header__explore svg {
+  color: var(--sage-dark);
+}
+
+.header__badge {
+  min-width: 20px;
+  padding: 0 6px;
+  border-radius: var(--radius-pill);
+  background: var(--sage);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}
+
+/* Logo badge (used in header and footer) */
+.logo-img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;     /* fills the box without stretching */
+  border-radius: 50%;    /* circular crop */
+  flex-shrink: 0;
+}
+
+.logo-img--sm {
+  width: 52px;
+  height: 52px;
+}
+
+/* Menu button is hidden on desktop */
+.header__menu-btn {
+  display: none;
+  padding: 6px;
+  border: none;
+  background: transparent;
+  color: var(--charcoal);
+  border-radius: var(--radius-sm);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .header__menu-btn {
+    display: inline-flex;
+  }
+
+  .header__nav {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 12px 20px 16px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    display: none;
+  }
+
+  .header__nav.is-open {
+    display: flex;
+  }
+
+  .header__link {
+    padding: 12px 14px;
+    font-size: 1rem;
+  }
+}
